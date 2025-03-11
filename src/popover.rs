@@ -1,4 +1,7 @@
+use std::any::Any;
 use objc2::{ffi::YES, msg_send, rc::Id};
+use objc2::rc::Retained;
+use objc2::runtime::AnyObject;
 use objc2_app_kit::{NSColor, NSPopover, NSPopoverBehavior, NSView, NSViewController, NSWindow};
 use objc2_foundation::MainThreadMarker;
 
@@ -21,8 +24,8 @@ impl PopoverController {
         view.setWantsLayer(true);
         unsafe {
             let color = NSColor::clearColor();
-            let _: () = msg_send![view.as_ref(), setBackgroundColor: color.as_ref()];
-            let _: () = msg_send![view.as_ref(), setOpaque: YES];
+            let _: () = msg_send![<Retained<NSView> as AsRef<AnyObject>>::as_ref(&view), setBackgroundColor: <Retained<NSColor> as AsRef<AnyObject>>::as_ref(&color)];
+            let _: () = msg_send![<Retained<NSView> as AsRef<AnyObject>>::as_ref(&view), setOpaque: YES];
         }
 
         return view;

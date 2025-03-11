@@ -295,46 +295,34 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-hide-popover -> Enables the hide_popover command without any pre-configured scope.",
+          "description": "Enables the hide_popover command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-hide-popover"
-          ]
+          "const": "allow-hide-popover"
         },
         {
-          "description": "deny-hide-popover -> Denies the hide_popover command without any pre-configured scope.",
+          "description": "Denies the hide_popover command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-hide-popover"
-          ]
+          "const": "deny-hide-popover"
         },
         {
-          "description": "allow-is-popover-shown -> Enables the is_popover_shown command without any pre-configured scope.",
+          "description": "Enables the is_popover_shown command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-is-popover-shown"
-          ]
+          "const": "allow-is-popover-shown"
         },
         {
-          "description": "deny-is-popover-shown -> Denies the is_popover_shown command without any pre-configured scope.",
+          "description": "Denies the is_popover_shown command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-is-popover-shown"
-          ]
+          "const": "deny-is-popover-shown"
         },
         {
-          "description": "allow-show-popover -> Enables the show_popover command without any pre-configured scope.",
+          "description": "Enables the show_popover command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-show-popover"
-          ]
+          "const": "allow-show-popover"
         },
         {
-          "description": "deny-show-popover -> Denies the show_popover command without any pre-configured scope.",
+          "description": "Denies the show_popover command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-show-popover"
-          ]
+          "const": "deny-show-popover"
         }
       ]
     }

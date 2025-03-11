@@ -29,7 +29,7 @@ pub use tauri::tray::TrayIconId;
 #[allow(dead_code)]
 pub struct StatusItem<R: Runtime> {
     id: TrayIconId,
-    pub(crate) inner: tray_icon::TrayIcon,
+    pub inner: tray_icon::TrayIcon,
     app_handle: AppHandle<R>,
 }
 
